@@ -1,0 +1,81 @@
+html,
+body {
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+}
+.block1 {
+  background: url("../img/bg1.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.block2 {
+  padding-top: 200px;
+  background: #2b99a7;
+  height: 100vh;
+  width: 100%;
+}
+.block3 {
+  background: url("../img/bg3.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  padding-top: 200px;
+}
+.block4 {
+  height: 100vh;
+  width: 100%;
+  padding-top: 200px;
+  background: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #414a51;
+  font-family: 'Lato', sans-serif;
+}
+.output {
+  font-weight: 400;
+}
+.light {
+  font-weight: 300;
+}
+.light span {
+  font-weight: 400;
+}
+.logo {
+  min-height: 200px;
+  margin: 15px 0;
+}
+.logo img {
+  max-width: 155px;
+}
+.block1 .fullwhite {
+  min-height: 346px;
+}
+.block1 .fullwhite h3 {
+  height: 80px;
+}
+.block1 .fullwhite .images img {
+  width: 80px;
+}
+.fullwhite {
+  background: #fff;
+  padding: 45px 0;
+}
+.range-slider.radius .range-slider-handle {
+  background: #2b99a7;
+}
+.range-slider.radius .range-slider-handle:hover {
+  background: #1e6a74;
+}
+.center-image {
+  text-align: center;
+}
+.center-image img {
+  height: 80px;
+  margin-bottom: 15px;
+}

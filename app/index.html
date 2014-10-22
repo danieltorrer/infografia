@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tian</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+	
+	<div class="block1">
+		<div class="row">
+			<div class="large-12 columns logo">
+				<img src="img/LOGO.png" alt="" class="">
+			</div>
+		</div>
+
+		<div class="fullwhite">
+			<div id="fact1" class="row">
+				<div class="large-12 columns">
+					<h1 class="text-center">Cifras sobre la industria de la construcción </h1>
+					<br>
+				</div>
+				<div class="large-8 columns">
+					<div class="slider">
+						<h3 class="text-center light"><span class="sliderOutput1 output"></span> toneladas de cemento produce <span class="sliderOutput1b output"></span> toneladas de CO<sub>2</sub></h3>
+
+						<div id="slider1" class="range-slider radius" data-slider data-options="display_selector: .sliderOutput1; start: 1; end: 50; step: 2;">
+							<span class="range-slider-handle" role="slider" tabindex="0"></span>
+							<span class="range-slider-active-segment"></span>
+						</div>
+					</div>
+				</div>
+				<div class="large-4 columns">
+					<div class="images">
+						<img src="img/e1.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="block2">
+		<div class="fullwhite">
+			<div class="row">
+				<div class="large-12 columns">
+					<h3 class="light">Una vivienda en promedio en México emplea entre 4 o 5 Ton, lo que equivale entre 4.8 y 6 ton de CO<sub>2</sub></h3>
+					
+					<div id="slider2" class="range-slider radius" data-slider data-options="display_selector: .sliderOutput2; start: 1; end: 50; step: 2;">
+						<span class="range-slider-handle" role="slider" tabindex="0"></span>
+						<span class="range-slider-active-segment"></span>
+					</div>
+					<!-- slider -->
+					<h3>Por lo tanto: </h3>
+					<h3 class="light">Para <span class="sliderOutput2 output"></span> tonelada(s) de cemento se necesitan <span class="sliderOutput2b output"></span> kilowatts/hora y <span class="sliderOutput2c output"></span> de combustible, esto implica que: </h3>
+					<h4 class="light">
+						Por <span class="sliderOutput2c output"></span> kW =  <span class="sliderOutput2c output"></span> CO<sub>2</sub> = <span class="sliderOutput2d output"></span> kg de CO<sub>2</sub>
+					</h4>
+					<h4>  </h4>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<div class="block3">
+		<div class="fullwhite">
+			<div class="row">
+				<div class="large-12 columns">
+					<div class="center-image"><img class="text-center" src="img/e2.png" alt=""></div>
+					<h3 class="light">Los trabajadores de la construcción que están en contacto con los polvos emitidos por la construcción tienden a desarrollar enfermedades pulmonares como la neumoconiosis* y muchas veces necesitan de un trasplante de pulmón. </h3>
+					<h5>*No hay cura, solo tratamiento para disminuir los síntomas</h5>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<div class="block4">
+		<div class="fullwhite">
+			<div class="row">
+				<div class="large-12 columns">
+					<div class="center-image"><img class="text-center" src="img/LOGO.png" alt=""></div>
+					<h3 class="light">En <span> TIAN taller del habitat </span> entendemos la necesidad de mejorar </h3>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script>
+	$(document).foundation();
+	$('#slider1').on('change.fndtn.slider', function(){
+		var numero = Math.floor( ( $('#slider1').attr('data-slider') * 1.2 ) *100 ) / 100 ;
+		$(".sliderOutput1b").html( numero );
+		var numImagenes = $('#slider1').attr('data-slider') % 52 / 10
+		$("#fact1 .images").html("");
+		
+		for (var i = 0; i < numImagenes; i++) {
+			var img = $('<img/>').attr('src','img/e1.png');
+
+			$("#fact1 .images").append(img);
+		}
+	});
+
+	$('#slider2').on('change.fndtn.slider', function(){
+		$(".sliderOutput2b").html( $("#slider2").attr('data-slider') * 100 ) // kw/h
+		$(".sliderOutput2c").html( $("#slider2").attr('data-slider') * 110 ) // combustible
+	});
+	</script>
+</body>
+</html>
